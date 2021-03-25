@@ -1,0 +1,56 @@
+{
+  "nombreApp": "Componentes",
+  "rutas": [
+    {
+      "ruta": "alert",
+      "icon": "add_alert",
+      "text": "Alertas",
+      "subMenu": [
+        {
+          "name": "Alerta Tipo 1",
+          "route": "alert1",
+          "content": "Esta es la alerta tipo uno: Hola!!!!"
+        },
+        {
+          "name": "Alerta Tipo 2",
+          "route": "alert2",
+          "content": "Esta es la segunda alerta: Saludos!!!"
+        }
+      ]
+    },
+    {
+      "ruta": "avatar",
+      "icon": "accessibility",
+      "text": "Avatar",
+      "subMenu": [
+        {
+          "name": "Avatar Tipo 1",
+          "route": "avatar1",
+          "content": "Este es el avatar tipo uno: Hello World!"
+        },
+        {
+          "name": "Avatar Tipo 2",
+          "route": "avatar2",
+          "content": "Este es el avatar tipo dos: Hello Universee!"
+        }
+      ]
+    },
+    {
+      "ruta": "card",
+      "icon": "folder_open",
+      "text": "Cards - Tarjetas",
+      "subMenu": [
+        {
+          "name": "Card Tipo 1",
+          "route": "card1",
+          "content": "Esta es la card tipo uno: Hello World, how are you!"
+        },
+        {
+          "name": "Card Tipo 2",
+          "route": "card2",
+          "content": "Esta es la card tipo dos: Hello World, nice to meet you!!!!"
+        }
+      ]
+    }
+  ]
+}

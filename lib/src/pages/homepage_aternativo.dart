@@ -1,7 +1,7 @@
 import 'package:P2_EJ1/src/components/StyledListTile.dart';
 import 'package:flutter/material.dart';
 
-class HomePageAlternativo extends StatelessWidget {
+class HomePage extends StatelessWidget {
   final opciones = [
     {
       "title": 'Uno',
