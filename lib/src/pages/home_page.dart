@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
                 break;
             }
           });
-          Navigator.push(context, route);
+          Navigator.pushNamed(context, opt['ruta']);
         },
       );
       opciones..add(widgetTemp)..add(Divider());

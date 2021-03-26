@@ -10,16 +10,16 @@ class AvatarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Avatar Page'),
-        ),
-        body: ListView.builder(
-          itemCount: subMenu.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(subMenu[index]['name']),
-              onTap: () {
-                Route route = MaterialPageRoute(builder: (context) {
+      appBar: AppBar(
+        title: Text('Avatar Page'),
+      ),
+      body: ListView.builder(
+        itemCount: subMenu != null ? subMenu.length: 0,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(subMenu[index]['name']),
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) {
                 switch (subMenu[index]["route"]) {
                   case 'avatar1':
                     return Avatar1Page(content: subMenu[index]["content"]);
@@ -28,14 +28,21 @@ class AvatarPage extends StatelessWidget {
                     return Avatar2Page(content: subMenu[index]["content"]);
                     break;
                   default:
-                  return Container();
-                  break;
+                    return Container();
+                    break;
                 }
               });
               Navigator.push(context, route);
-              },
-            );
-          },
-        ));
+            },
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_left),
+      ),
+    );
   }
 }

@@ -14,7 +14,7 @@ class AlertPage extends StatelessWidget {
         title: Text('Alert Page'),
       ),
       body: ListView.builder(
-        itemCount: subMenu.length,
+        itemCount: subMenu != null ? subMenu.length: 0,
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(subMenu[index]["name"]),
@@ -28,8 +28,8 @@ class AlertPage extends StatelessWidget {
                     return Alert2Page(content: subMenu[index]["content"]);
                     break;
                   default:
-                  return Container();
-                  break;
+                    return Container();
+                    break;
                 }
               });
 
@@ -37,6 +37,12 @@ class AlertPage extends StatelessWidget {
             },
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_left),
       ),
     );
   }
